@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  h1,
+  p {
+    margin: 0;
+  }
+  
+  /* VARIABLES */
+  :root {
+    --clr-primary-1: hsl(190, 83%, 29%);
+    --clr-primary-2: hsla(184, 95%, 30%, 0.377);
+    --clr-primary-3: hsl(179, 95%, 9%);
+  
+    --clr-neutral-white: hsla(0, 0%, 100%, 0.75);
+    --clr-neutral-gray: hsl(0, 0%, 95%);
+  }
+  
+  body {
+    font-size: 15px;
+    font-family: 'Overpass', sans-serif;
+    color: var(--clr-neutral-white);
+  }
+  
+  .container {
+    max-width: 900px;
+    width: 80%;
+    margin: auto;
+    height: 95vh;
+    display: grid;
+    align-items: center;
+  }
+  
+  .stack {
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+  }
+  
+  .card {
+    width: calc(100% / 3);
+    padding: calc(8px + 1.5625vw);
+    font-size: 1em;
+  }
+  
+  .card .title {
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    margin: 0.75em 0;
+    font-size: 2rem;
+  }
+  
+  .card .card-info {
+    line-height: 1.5;
+    margin-bottom: 5em;
+  }
+  
+  .card .btn-more {
+    font-size: 1rem;
+    font-weight: 300;
+    border-radius: 110px;
+    padding: 0.5em 1em;
+    margin-bottom: 1.5em;
+    border-color: transparent;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+  }
+  
+  .card .btn-more:hover {
+    background-color: transparent;
+    border: 2px solid var(--clr-neutral-white);
+    color: var(--clr-neutral-white);
+  }
+  
+  .one .btn-more {
+    color: var(--clr-primary-1);
+  }
+  
+  .two .btn-more {
+    color: var(--clr-primary-2);
+  }
+  
+  .three .btn-more {
+    color: var(--clr-primary-3);
+  }
+  
+  .card.one {
+    background-color: var(--clr-primary-1);
+  }
+  .card.two {
+    background-color: var(--clr-primary-2);
+  }
+  .card.three {
+    background-color: var(--clr-primary-3);
+  }
+  
+  /* FEM- Attibution */
+  .attribution {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 18px;
+    text-align: center;
+    padding: 0.5em;
+    background-color: #333;
+    color: #eee;
+  }
+  .attribution a {
+    color: hsl(228, 49%, 60%);
+  }
+  /* END - FEM- Attibution */
+  
+  @media screen and (max-width: 700px) {
+    .stack {
+      flex-direction: column;
+    }
+  
+    .card.one {
+      border-radius: 10px 10px 0 0;
+    }
+  
+    .card.three {
+      border-radius: 0 0 10px 10px;
+    }
+  
+    .card {
+      padding: 3em;
+      width: 90%;
+      margin: auto;
+    }
+  
+    .container {
+      width: 100%;
+    }
+  }
